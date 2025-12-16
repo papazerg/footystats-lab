@@ -1,0 +1,14 @@
+# Environment
+.env
+
+# Data
+data/raw/*
+data/processed/*
+data/results/*
+!data/**/.keep
+
+# OS
+.DS_Store
+
+# Editor
+.vscode/
