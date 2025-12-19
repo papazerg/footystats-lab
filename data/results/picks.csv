@@ -22,18 +22,18 @@ date,league,match,kickoff_utc,market,confidence,model_btts,model_o25,match_id,fi
 2025-12-18,Europe UEFA Europa Conference League,Slovan Bratislava vs Häcken,20:00,BTTS,MEDIUM,66,59,8252618,1-0,L
 2025-12-19,Australia A-League,Macarthur vs Brisbane Roar,07:00,BTTS,PASS,50,25,8266460,2-1,W
 2025-12-19,Australia A-League,Western Sydney Wanderers vs Auckland,09:00,BTTS,PASS,59,46,8266493,0-2,L
-2025-12-19,Belgium Pro League,Sporting Charleroi vs KRC Genk,19:45,BTTS,MEDIUM,67,45,8210093,0-0,L
-2025-12-19,England Championship,Swansea City vs Wrexham,20:00,BTTS,PASS,57,33,8202058,0-0,L
-2025-12-19,Germany Bundesliga,Borussia Dortmund vs Borussia M'gladbach,19:30,O2.5,PASS,33,42,8227681,0-0,L
-2025-12-19,Germany 2. Bundesliga,Hertha BSC vs Arminia Bielefeld,17:30,BTTS,PASS,35,28,8227947,0-0,L
-2025-12-19,Germany 2. Bundesliga,Paderborn vs Darmstadt 98,17:30,BTTS,PASS,53,53,8228095,0-0,L
-2025-12-19,Italy Serie B,Bari 1908 vs Catanzaro,19:30,BTTS,MEDIUM,64,43,8173328,0-0,L
-2025-12-19,Netherlands Eerste Divisie,VVV vs Dordrecht,19:00,O2.5,PASS,35,55,7957528,0-0,L
-2025-12-19,Netherlands Eerste Divisie,ADO Den Haag vs PSV II,19:00,O2.5,STRONG,74,85,7957538,0-0,L
-2025-12-19,Netherlands Eerste Divisie,Cambuur vs MVV,19:00,O2.5,MEDIUM,50,60,7957542,0-0,L
-2025-12-19,Netherlands Eerste Divisie,Eindhoven vs AZ II,19:00,O2.5,MEDIUM,60,65,7957544,0-0,L
-2025-12-19,Portugal Liga NOS,GD Estoril Praia vs Sporting Braga,20:15,BTTS,STRONG,71,57,8227395,0-0,L
-2025-12-19,Romania Liga I,Botoşani vs CFR Cluj,18:00,BTTS,STRONG,70,50,8205591,0-0,L
-2025-12-19,Spain La Liga,Valencia CF vs RCD Mallorca,20:00,BTTS,PASS,57,50,8200579,0-0,L
-2025-12-19,Spain Segunda División,SD Eibar vs Real Valladolid,19:30,BTTS,PASS,47,35,8235027,0-0,L
-2025-12-19,Turkey Süper Lig,Kocaelispor vs Antalyaspor,17:00,BTTS,PASS,25,13,8231866,0-0,L
+2025-12-19,Belgium Pro League,Sporting Charleroi vs KRC Genk,19:45,BTTS,MEDIUM,67,45,8210093,"",pending
+2025-12-19,England Championship,Swansea City vs Wrexham,20:00,BTTS,PASS,57,33,8202058,"",pending
+2025-12-19,Germany Bundesliga,Borussia Dortmund vs Borussia M'gladbach,19:30,O2.5,PASS,33,42,8227681,"",pending
+2025-12-19,Germany 2. Bundesliga,Hertha BSC vs Arminia Bielefeld,17:30,BTTS,PASS,35,28,8227947,"",pending
+2025-12-19,Germany 2. Bundesliga,Paderborn vs Darmstadt 98,17:30,BTTS,PASS,53,53,8228095,"",pending
+2025-12-19,Italy Serie B,Bari 1908 vs Catanzaro,19:30,BTTS,MEDIUM,64,43,8173328,"",pending
+2025-12-19,Netherlands Eerste Divisie,VVV vs Dordrecht,19:00,O2.5,PASS,35,55,7957528,"",pending
+2025-12-19,Netherlands Eerste Divisie,ADO Den Haag vs PSV II,19:00,O2.5,STRONG,74,85,7957538,"",pending
+2025-12-19,Netherlands Eerste Divisie,Cambuur vs MVV,19:00,O2.5,MEDIUM,50,60,7957542,"",pending
+2025-12-19,Netherlands Eerste Divisie,Eindhoven vs AZ II,19:00,O2.5,MEDIUM,60,65,7957544,"",pending
+2025-12-19,Portugal Liga NOS,GD Estoril Praia vs Sporting Braga,20:15,BTTS,STRONG,71,57,8227395,"",pending
+2025-12-19,Romania Liga I,Botoşani vs CFR Cluj,18:00,BTTS,STRONG,70,50,8205591,"",pending
+2025-12-19,Spain La Liga,Valencia CF vs RCD Mallorca,20:00,BTTS,PASS,57,50,8200579,"",pending
+2025-12-19,Spain Segunda División,SD Eibar vs Real Valladolid,19:30,BTTS,PASS,47,35,8235027,"",pending
+2025-12-19,Turkey Süper Lig,Kocaelispor vs Antalyaspor,17:00,BTTS,PASS,25,13,8231866,"",pending
