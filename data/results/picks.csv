@@ -37,33 +37,33 @@ date,league,match,kickoff_utc,market,confidence,model_btts,model_o25,match_id,fi
 2025-12-19,Spain La Liga,Valencia CF vs RCD Mallorca,20:00,BTTS,PASS,57,50,8200579,1-1,W
 2025-12-19,Spain Segunda División,SD Eibar vs Real Valladolid,19:30,BTTS,PASS,47,35,8235027,3-0,L
 2025-12-19,Turkey Süper Lig,Kocaelispor vs Antalyaspor,17:00,BTTS,PASS,25,13,8231866,2-1,W
-2025-12-20,Australia A-League,Newcastle Jets FC vs Sydney FC,06:00,BTTS,MEDIUM,68,68,8266517,"",pending
-2025-12-20,Australia A-League,Melbourne City FC vs Melbourne Victory FC,08:35,O2.5,STRONG,10,70,8266458,"",pending
-2025-12-20,Australia A-League,Perth Glory FC vs Adelaide United,10:45,BTTS,MEDIUM,60,60,8270569,"",pending
+2025-12-20,Australia A-League,Newcastle Jets FC vs Sydney FC,06:00,BTTS,MEDIUM,68,68,8266517,2-0,L
+2025-12-20,Australia A-League,Melbourne City FC vs Melbourne Victory FC,08:35,O2.5,STRONG,10,70,8266458,0-1,L
+2025-12-20,Australia A-League,Perth Glory FC vs Adelaide United,10:45,BTTS,MEDIUM,60,60,8270569,0-1,L
 2025-12-20,Switzerland Super League,Thun vs Zürich,17:00,BTTS,MEDIUM,65,65,7962787,"",pending
 2025-12-20,Switzerland Super League,Sion vs Winterthur,17:00,O2.5,MEDIUM,33,67,7962791,"",pending
 2025-12-20,Switzerland Super League,Basel vs Servette,19:30,O2.5,MEDIUM,58,64,7962790,"",pending
-2025-12-20,Turkey Süper Lig,Konyaspor vs Kayserispor,11:30,BTTS,MEDIUM,69,51,8231856,"",pending
-2025-12-20,England Championship,Blackburn Rovers vs Millwall,12:30,BTTS,STRONG,75,50,8201884,"",pending
-2025-12-20,England Championship,Preston North End vs Norwich City,12:30,BTTS,STRONG,73,45,8201891,"",pending
-2025-12-20,England Championship,Southampton vs Coventry City,12:30,O2.5,MEDIUM,58,67,8202067,"",pending
-2025-12-20,Romania Liga I,Metaloglobus vs Unirea Slobozia,12:30,BTTS,MEDIUM,60,55,8205581,"",pending
-2025-12-20,England Premier League,Newcastle United vs Chelsea,12:30,O2.5,MEDIUM,63,69,8223515,"",pending
-2025-12-20,Spain La Liga,Real Oviedo vs Celta de Vigo,13:00,BTTS,PASS,42,34,8200575,"",pending
-2025-12-20,Spain Segunda División,FC Andorra vs Deportivo La Coruña,13:00,BTTS,STRONG,71,65,8235140,"",pending
-2025-12-20,Italy Serie B,Monza vs Carrarese,14:00,BTTS,PASS,57,44,8173329,"",pending
-2025-12-20,Italy Serie B,Cesena vs Juve Stabia,14:00,O2.5,MEDIUM,61,66,8173330,"",pending
-2025-12-20,Italy Serie B,Modena vs Venezia,14:00,BTTS,PASS,57,51,8173331,"",pending
-2025-12-20,Italy Serie B,Frosinone vs Spezia,14:00,O2.5,PASS,43,50,8173332,"",pending
-2025-12-20,Italy Serie B,Calcio Padova vs Sampdoria,14:00,BTTS,MEDIUM,67,41,8173337,"",pending
-2025-12-20,Portugal LigaPro,GD Chaves vs Portimonense,14:00,BTTS,MEDIUM,63,42,8193838,"",pending
-2025-12-20,Turkey Süper Lig,Eyüpspor vs Fenerbahçe,14:00,BTTS,PASS,57,38,8231865,"",pending
-2025-12-20,Greece Super League,Asteras Tripolis vs Aris,14:00,BTTS,STRONG,70,62,8280580,"",pending
-2025-12-20,Germany Bundesliga,Wolfsburg vs Freiburg,14:30,O2.5,MEDIUM,57,64,8227544,"",pending
-2025-12-20,Germany Bundesliga,Stuttgart vs Hoffenheim,14:30,O2.5,PASS,52,54,8227684,"",pending
-2025-12-20,Germany Bundesliga,Köln vs Union Berlin,14:30,BTTS,MEDIUM,67,59,8227701,"",pending
-2025-12-20,Germany Bundesliga,Hamburger SV vs Eintracht Frankfurt,14:30,BTTS,STRONG,72,72,8227725,"",pending
-2025-12-20,Germany Bundesliga,Augsburg vs Werder Bremen,14:30,O2.5,MEDIUM,50,64,8227795,"",pending
+2025-12-20,Turkey Süper Lig,Konyaspor vs Kayserispor,11:30,BTTS,MEDIUM,69,51,8231856,1-1,W
+2025-12-20,England Championship,Blackburn Rovers vs Millwall,12:30,BTTS,STRONG,75,50,8201884,2-0,L
+2025-12-20,England Championship,Preston North End vs Norwich City,12:30,BTTS,STRONG,73,45,8201891,1-1,W
+2025-12-20,England Championship,Southampton vs Coventry City,12:30,O2.5,MEDIUM,58,67,8202067,1-1,L
+2025-12-20,Romania Liga I,Metaloglobus vs Unirea Slobozia,12:30,BTTS,MEDIUM,60,55,8205581,2-3,W
+2025-12-20,England Premier League,Newcastle United vs Chelsea,12:30,O2.5,MEDIUM,63,69,8223515,2-2,W
+2025-12-20,Spain La Liga,Real Oviedo vs Celta de Vigo,13:00,BTTS,PASS,42,34,8200575,0-0,L
+2025-12-20,Spain Segunda División,FC Andorra vs Deportivo La Coruña,13:00,BTTS,STRONG,71,65,8235140,1-0,L
+2025-12-20,Italy Serie B,Monza vs Carrarese,14:00,BTTS,PASS,57,44,8173329,4-1,W
+2025-12-20,Italy Serie B,Cesena vs Juve Stabia,14:00,O2.5,MEDIUM,61,66,8173330,1-1,L
+2025-12-20,Italy Serie B,Modena vs Venezia,14:00,BTTS,PASS,57,51,8173331,1-2,W
+2025-12-20,Italy Serie B,Frosinone vs Spezia,14:00,O2.5,PASS,43,50,8173332,2-1,W
+2025-12-20,Italy Serie B,Calcio Padova vs Sampdoria,14:00,BTTS,MEDIUM,67,41,8173337,1-1,W
+2025-12-20,Portugal LigaPro,GD Chaves vs Portimonense,14:00,BTTS,MEDIUM,63,42,8193838,0-1,L
+2025-12-20,Turkey Süper Lig,Eyüpspor vs Fenerbahçe,14:00,BTTS,PASS,57,38,8231865,0-3,L
+2025-12-20,Greece Super League,Asteras Tripolis vs Aris,14:00,BTTS,STRONG,70,62,8280580,0-1,L
+2025-12-20,Germany Bundesliga,Wolfsburg vs Freiburg,14:30,O2.5,MEDIUM,57,64,8227544,3-4,W
+2025-12-20,Germany Bundesliga,Stuttgart vs Hoffenheim,14:30,O2.5,PASS,52,54,8227684,0-0,L
+2025-12-20,Germany Bundesliga,Köln vs Union Berlin,14:30,BTTS,MEDIUM,67,59,8227701,0-1,L
+2025-12-20,Germany Bundesliga,Hamburger SV vs Eintracht Frankfurt,14:30,BTTS,STRONG,72,72,8227725,1-1,W
+2025-12-20,Germany Bundesliga,Augsburg vs Werder Bremen,14:30,O2.5,MEDIUM,50,64,8227795,0-0,L
 2025-12-20,England Championship,Bristol City vs Middlesbrough,15:00,BTTS,MEDIUM,60,55,8201974,"",pending
 2025-12-20,England Championship,Ipswich Town vs Sheffield Wednesday,15:00,BTTS,PASS,56,56,8201975,"",pending
 2025-12-20,England Championship,Sheffield United vs Birmingham City,15:00,BTTS,PASS,48,48,8201992,"",pending
