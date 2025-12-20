@@ -1,99 +1,100 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 require "csv"
 require "date"
-require_relative "../lib/footystats"
-require "yaml"
+require "json"
+require "net/http"
+require "uri"
 
-abort("Usage: update_results.rb YYYY-MM-DD") unless ARGV[0]
+PICKS_CSV = "data/results/picks.csv"
 
-LEAGUES = YAML.load_file(
-  File.expand_path("../config/leagues.yml", __dir__)
-)
+API_KEY = ENV["FOOTYSTATS_API_KEY"]
+abort("FOOTYSTATS_API_KEY not set") unless API_KEY && !API_KEY.empty?
 
-target_date = Date.parse(ARGV[0]).to_s
-csv_path = File.expand_path("../data/results/picks.csv", __dir__)
+TARGET_DATE =
+  if ARGV[0]
+    Date.parse(ARGV[0])
+  else
+    Date.today
+  end
 
-abort("picks.csv not found") unless File.exist?(csv_path)
+puts "API KEY PRESENT? YES"
+puts "Updating results for #{TARGET_DATE}"
 
-client = FootyStats.new
-rows   = CSV.read(csv_path, headers: true)
+def fetch_match(match_id)
+  uri = URI("https://api.football-data-api.com/match?key=#{API_KEY}&match_id=#{match_id}")
+  res = Net::HTTP.get_response(uri)
+  raise "API error #{res.code}" unless res.is_a?(Net::HTTPSuccess)
+
+  body = JSON.parse(res.body)
+  body["data"]
+end
+
+rows = CSV.table(PICKS_CSV)
 
 updated = 0
 skipped = 0
 
-# Cache matches per league so we don’t re-fetch
-league_cache = {}
-
-def fetch_matches(client, league_cache, cfg)
-  league_cache[cfg["name"]] ||= begin
-    season_id = client.current_season_id(
-      country: cfg["country"],
-      league_name: cfg["league_name"]
-    )
-    client.matches_for_season(season_id)
-  end
-end
-
 rows.each do |row|
-  # Only update pending rows for the target date
-  next unless row["date"] == target_date
-  next unless row["result"] == "pending"
+  # Skip header corruption or malformed rows
+  next if row[:date].nil?
+  next if row[:date].to_s.strip.downcase == "date"
 
-  cfg = LEAGUES.find { |l| l["name"] == row["league"] }
-  unless cfg
+  row_date =
+    begin
+      Date.parse(row[:date].to_s.strip)
+    rescue
+      nil
+    end
+
+  next unless row_date == TARGET_DATE
+  next unless row[:result].to_s.strip.downcase == "pending"
+
+  match_id = row[:match_id].to_s.strip
+  next if match_id.empty?
+
+  begin
+    match = fetch_match(match_id)
+
+    # Only process completed matches
+    status = match["status"].to_s.downcase
+    unless status == "complete"
+      skipped += 1
+      next
+    end
+
+    home_goals = match["homeGoalCount"]
+    away_goals = match["awayGoalCount"]
+    next if home_goals.nil? || away_goals.nil?
+
+    final_score = "#{home_goals}-#{away_goals}"
+
+    market = row[:market].to_s.upcase
+    win =
+      case market
+      when "BTTS"
+        home_goals > 0 && away_goals > 0
+      when "O2.5"
+        (home_goals + away_goals) >= 3
+      else
+        false
+      end
+
+    row[:final_score] = final_score
+    row[:result] = win ? "W" : "L"
+
+    updated += 1
+  rescue => e
+    puts "ERROR fetching match #{match_id}: #{e.class} – #{e.message}"
     skipped += 1
-    next
   end
-
-  matches = fetch_matches(client, league_cache, cfg)
-
-  api_match = matches.find do |m|
-    m["id"].to_s == row["match_id"].to_s
-  end
-
-  unless api_match
-    skipped += 1
-    next
-  end
-
-  home_goals = api_match["homeGoalCount"]
-  away_goals = api_match["awayGoalCount"]
-
-  # Match not finished yet
-  if home_goals.nil? || away_goals.nil?
-    skipped += 1
-    next
-  end
-
-  # Record final score for transparency
-  final_score = "#{home_goals}-#{away_goals}"
-  row["final_score"] = final_score
-
-  # Grade result by market
-  case row["market"]
-  when "BTTS"
-    row["result"] = (home_goals > 0 && away_goals > 0) ? "W" : "L"
-  when "O2.5"
-    row["result"] = (home_goals + away_goals >= 3) ? "W" : "L"
-  else
-    skipped += 1
-    next
-  end
-
-  updated += 1
 end
 
-# Ensure final_score column exists in output
-headers = rows.headers
-unless headers.include?("final_score")
-  headers.insert(headers.index("match_id") + 1, "final_score")
-end
-
-CSV.open(csv_path, "w", write_headers: true, headers: headers) do |csv|
+CSV.open(PICKS_CSV, "w") do |csv|
+  csv << rows.headers
   rows.each { |r| csv << r }
 end
 
-puts "📅 Updating results for #{target_date}"
-puts "✅ Results updated: #{updated}"
-puts "⏭️ Skipped (not finished / not found): #{skipped}"
+puts "Results updated: #{updated}"
+puts "Skipped (not finished / API issues): #{skipped}"

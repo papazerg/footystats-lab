@@ -12,3 +12,4 @@ data/results/*
 
 # Editor
 .vscode/
+.env
