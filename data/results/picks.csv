@@ -108,53 +108,53 @@ date,league,match,kickoff_utc,market,confidence,model_btts,model_o25,match_id,fi
 2025-12-20,England Premier League,Everton vs Arsenal,20:00,BTTS,PASS,44,44,8223648,0-1,L
 2025-12-20,Spain Segunda División,UD Las Palmas vs Cultural y Deportiva Leonesa,20:00,O2.5,PASS,50,56,8234965,4-0,W
 2025-12-20,Portugal Liga NOS,Estrela Amadora vs Moreirense FC,20:30,O2.5,PASS,50,57,8227275,0-0,L
-2025-12-21,Australia A-League,Wellington Phoenix vs Central Coast Mariners,02:00,BTTS,PASS,57,57,8266459,"",pending
-2025-12-21,Portugal LigaPro,Felgueiras 1932 vs Porto II,11:00,O2.5,PASS,45,47,8193721,"",pending
-2025-12-21,Netherlands Eredivisie,Utrecht vs PSV,11:15,O2.5,MEDIUM,57,63,8007575,"",pending
-2025-12-21,Netherlands Eerste Divisie,Den Bosch vs Vitesse,11:15,BTTS,MEDIUM,69,69,8242315,"",pending
-2025-12-21,Turkey Süper Lig,Alanyaspor vs Fatih Karagümrük,11:30,O2.5,PASS,36,43,8231861,"",pending
-2025-12-21,Italy Serie A,Cagliari vs Pisa,11:30,BTTS,PASS,57,50,8238696,"",pending
-2025-12-21,Romania Liga I,Hermannstadt vs Petrolul 52,12:00,BTTS,PASS,45,35,8205586,"",pending
-2025-12-21,Belgium Pro League,Club Brugge vs KAA Gent,12:30,BTTS,PASS,53,47,8210091,"",pending
-2025-12-21,Switzerland Super League,Lausanne Sport vs Luzern,13:00,O2.5,STRONG,73,78,7962788,"",pending
-2025-12-21,Spain La Liga,Girona FC vs Atlético Madrid,13:00,BTTS,PASS,57,38,8200727,"",pending
-2025-12-21,Spain Segunda División,Málaga CF vs Almería,13:00,BTTS,MEDIUM,67,56,8235194,"",pending
-2025-12-21,Netherlands Eerste Divisie,Helmond Sport vs Willem II,13:30,BTTS,STRONG,75,75,7957541,"",pending
-2025-12-21,Netherlands Eredivisie,Feyenoord vs Twente,13:30,BTTS,MEDIUM,69,51,8007566,"",pending
-2025-12-21,Netherlands Eredivisie,Go Ahead Eagles vs Groningen,13:30,O2.5,MEDIUM,54,61,8007570,"",pending
-2025-12-21,Italy Serie B,Virtus Entella vs Südtirol,14:00,BTTS,MEDIUM,69,25,8173334,"",pending
-2025-12-21,Portugal LigaPro,Leixões vs CS Marítimo,14:00,O2.5,PASS,19,32,8193813,"",pending
-2025-12-21,Italy Serie A,Sassuolo vs Torino,14:00,O2.5,PASS,50,57,8238735,"",pending
-2025-12-21,Romania Liga I,Universitatea Cluj vs SSC Farul,14:30,BTTS,PASS,55,40,8205592,"",pending
-2025-12-21,Germany Bundesliga,Mainz 05 vs St. Pauli,14:30,BTTS,PASS,43,22,8227683,"",pending
-2025-12-21,Belgium Pro League,Sint-Truiden vs KV Mechelen,15:00,BTTS,MEDIUM,62,56,8210144,"",pending
-2025-12-21,Spain La Liga,Villarreal vs FC Barcelona,15:15,O2.5,STRONG,63,76,8200732,"",pending
-2025-12-21,Spain Segunda División,Mirandés vs Córdoba,15:15,BTTS,PASS,53,41,8234962,"",pending
-2025-12-21,Spain Segunda División,Real Sociedad II vs Ceuta,15:15,BTTS,PASS,44,44,8235030,"",pending
-2025-12-21,Switzerland Super League,Lugano vs Young Boys,15:30,BTTS,STRONG,78,67,7962789,"",pending
-2025-12-21,Switzerland Super League,Grasshopper vs St. Gallen,15:30,BTTS,MEDIUM,69,69,7962792,"",pending
-2025-12-21,Portugal LigaPro,Farense vs União de Leiria,15:30,BTTS,PASS,37,31,8193880,"",pending
-2025-12-21,Portugal Liga NOS,AVS vs CD Nacional,15:30,BTTS,PASS,50,29,8227394,"",pending
-2025-12-21,Greece Super League,Larissa vs Atromitos,15:30,BTTS,PASS,57,43,8280563,"",pending
-2025-12-21,Netherlands Eredivisie,Volendam vs Sparta Rotterdam,15:45,O2.5,MEDIUM,59,66,8007377,"",pending
-2025-12-21,Netherlands Eredivisie,Fortuna Sittard vs AZ,15:45,BTTS,PASS,57,50,8007577,"",pending
-2025-12-21,Italy Serie B,Mantova vs Empoli,16:15,O2.5,MEDIUM,59,67,8173325,"",pending
-2025-12-21,England Premier League,Aston Villa vs Manchester United,16:30,O2.5,STRONG,63,76,8223646,"",pending
-2025-12-21,Germany Bundesliga,Heidenheim vs Bayern München,16:30,O2.5,STRONG,61,86,8227794,"",pending
-2025-12-21,Turkey Süper Lig,Göztepe vs Samsunspor,17:00,BTTS,PASS,58,43,8231858,"",pending
-2025-12-21,Turkey Süper Lig,Galatasaray vs Kasımpaşa,17:00,BTTS,MEDIUM,63,63,8231869,"",pending
-2025-12-21,Italy Serie A,Fiorentina vs Udinese,17:00,BTTS,STRONG,72,57,8238734,"",pending
-2025-12-21,Spain La Liga,Elche CF vs Rayo Vallecano,17:30,O2.5,PASS,36,41,8200572,"",pending
-2025-12-21,Belgium Pro League,Royal Antwerp FC vs RSC Anderlecht,17:30,BTTS,PASS,52,46,8210147,"",pending
-2025-12-21,Spain Segunda División,Burgos CF vs Real Zaragoza,17:30,BTTS,PASS,45,28,8234964,"",pending
-2025-12-21,Spain Segunda División,Granada CF vs Albacete Balompié,17:30,BTTS,MEDIUM,62,50,8235028,"",pending
-2025-12-21,Greece Super League,PAOK vs Panathinaikos,17:30,O2.5,MEDIUM,48,62,8280487,"",pending
-2025-12-21,Portugal LigaPro,FC Penafiel vs Torreense,18:00,BTTS,PASS,23,22,8193879,"",pending
-2025-12-21,Romania Liga I,FCSB vs Rapid Bucureşti,18:00,BTTS,PASS,32,26,8205652,"",pending
-2025-12-21,Portugal Liga NOS,CD Tondela vs Casa Pia,18:00,O2.5,PASS,23,45,8227280,"",pending
-2025-12-21,Belgium Pro League,OH Leuven vs Cercle Brugge,18:15,BTTS,PASS,53,41,8210092,"",pending
-2025-12-21,Greece Super League,AEK Athens vs OFI,19:00,O2.5,PASS,24,49,8280472,"",pending
-2025-12-21,Italy Serie A,Genoa vs Atalanta,19:45,BTTS,PASS,55,47,8238448,"",pending
-2025-12-21,Spain La Liga,Real Betis vs Getafe CF,20:00,O2.5,PASS,38,50,8200574,"",pending
-2025-12-21,Spain Segunda División,Cádiz vs CD Castellón,20:00,BTTS,PASS,50,50,8235307,"",pending
-2025-12-21,Portugal Liga NOS,Santa Clara vs FC Arouca,20:30,O2.5,MEDIUM,55,63,8227271,"",pending
+2025-12-21,Australia A-League,Wellington Phoenix vs Central Coast Mariners,02:00,BTTS,PASS,57,57,8266459,3-1,W
+2025-12-21,Portugal LigaPro,Felgueiras 1932 vs Porto II,11:00,O2.5,PASS,45,47,8193721,2-0,L
+2025-12-21,Netherlands Eredivisie,Utrecht vs PSV,11:15,O2.5,MEDIUM,57,63,8007575,1-2,W
+2025-12-21,Netherlands Eerste Divisie,Den Bosch vs Vitesse,11:15,BTTS,MEDIUM,69,69,8242315,2-0,L
+2025-12-21,Turkey Süper Lig,Alanyaspor vs Fatih Karagümrük,11:30,O2.5,PASS,36,43,8231861,2-0,L
+2025-12-21,Italy Serie A,Cagliari vs Pisa,11:30,BTTS,PASS,57,50,8238696,2-2,W
+2025-12-21,Romania Liga I,Hermannstadt vs Petrolul 52,12:00,BTTS,PASS,45,35,8205586,1-1,W
+2025-12-21,Belgium Pro League,Club Brugge vs KAA Gent,12:30,BTTS,PASS,53,47,8210091,2-1,W
+2025-12-21,Switzerland Super League,Lausanne Sport vs Luzern,13:00,O2.5,STRONG,73,78,7962788,0-4,W
+2025-12-21,Spain La Liga,Girona FC vs Atlético Madrid,13:00,BTTS,PASS,57,38,8200727,0-3,L
+2025-12-21,Spain Segunda División,Málaga CF vs Almería,13:00,BTTS,MEDIUM,67,56,8235194,2-1,W
+2025-12-21,Netherlands Eerste Divisie,Helmond Sport vs Willem II,13:30,BTTS,STRONG,75,75,7957541,2-2,W
+2025-12-21,Netherlands Eredivisie,Feyenoord vs Twente,13:30,BTTS,MEDIUM,69,51,8007566,1-1,W
+2025-12-21,Netherlands Eredivisie,Go Ahead Eagles vs Groningen,13:30,O2.5,MEDIUM,54,61,8007570,1-1,L
+2025-12-21,Italy Serie B,Virtus Entella vs Südtirol,14:00,BTTS,MEDIUM,69,25,8173334,1-1,W
+2025-12-21,Portugal LigaPro,Leixões vs CS Marítimo,14:00,O2.5,PASS,19,32,8193813,1-4,W
+2025-12-21,Italy Serie A,Sassuolo vs Torino,14:00,O2.5,PASS,50,57,8238735,0-1,L
+2025-12-21,Romania Liga I,Universitatea Cluj vs SSC Farul,14:30,BTTS,PASS,55,40,8205592,1-0,L
+2025-12-21,Germany Bundesliga,Mainz 05 vs St. Pauli,14:30,BTTS,PASS,43,22,8227683,0-0,L
+2025-12-21,Belgium Pro League,Sint-Truiden vs KV Mechelen,15:00,BTTS,MEDIUM,62,56,8210144,1-0,L
+2025-12-21,Spain La Liga,Villarreal vs FC Barcelona,15:15,O2.5,STRONG,63,76,8200732,0-2,L
+2025-12-21,Spain Segunda División,Mirandés vs Córdoba,15:15,BTTS,PASS,53,41,8234962,1-2,W
+2025-12-21,Spain Segunda División,Real Sociedad II vs Ceuta,15:15,BTTS,PASS,44,44,8235030,1-3,W
+2025-12-21,Switzerland Super League,Lugano vs Young Boys,15:30,BTTS,STRONG,78,67,7962789,3-0,L
+2025-12-21,Switzerland Super League,Grasshopper vs St. Gallen,15:30,BTTS,MEDIUM,69,69,7962792,1-2,W
+2025-12-21,Portugal LigaPro,Farense vs União de Leiria,15:30,BTTS,PASS,37,31,8193880,0-1,L
+2025-12-21,Portugal Liga NOS,AVS vs CD Nacional,15:30,BTTS,PASS,50,29,8227394,2-2,W
+2025-12-21,Greece Super League,Larissa vs Atromitos,15:30,BTTS,PASS,57,43,8280563,0-0,L
+2025-12-21,Netherlands Eredivisie,Volendam vs Sparta Rotterdam,15:45,O2.5,MEDIUM,59,66,8007377,0-1,L
+2025-12-21,Netherlands Eredivisie,Fortuna Sittard vs AZ,15:45,BTTS,PASS,57,50,8007577,4-3,W
+2025-12-21,Italy Serie B,Mantova vs Empoli,16:15,O2.5,MEDIUM,59,67,8173325,0-1,L
+2025-12-21,England Premier League,Aston Villa vs Manchester United,16:30,O2.5,STRONG,63,76,8223646,2-1,W
+2025-12-21,Germany Bundesliga,Heidenheim vs Bayern München,16:30,O2.5,STRONG,61,86,8227794,0-4,W
+2025-12-21,Turkey Süper Lig,Göztepe vs Samsunspor,17:00,BTTS,PASS,58,43,8231858,2-0,L
+2025-12-21,Turkey Süper Lig,Galatasaray vs Kasımpaşa,17:00,BTTS,MEDIUM,63,63,8231869,3-0,L
+2025-12-21,Italy Serie A,Fiorentina vs Udinese,17:00,BTTS,STRONG,72,57,8238734,5-1,W
+2025-12-21,Spain La Liga,Elche CF vs Rayo Vallecano,17:30,O2.5,PASS,36,41,8200572,4-0,W
+2025-12-21,Belgium Pro League,Royal Antwerp FC vs RSC Anderlecht,17:30,BTTS,PASS,52,46,8210147,2-2,W
+2025-12-21,Spain Segunda División,Burgos CF vs Real Zaragoza,17:30,BTTS,PASS,45,28,8234964,1-1,W
+2025-12-21,Spain Segunda División,Granada CF vs Albacete Balompié,17:30,BTTS,MEDIUM,62,50,8235028,1-1,W
+2025-12-21,Greece Super League,PAOK vs Panathinaikos,17:30,O2.5,MEDIUM,48,62,8280487,2-0,L
+2025-12-21,Portugal LigaPro,FC Penafiel vs Torreense,18:00,BTTS,PASS,23,22,8193879,1-0,L
+2025-12-21,Romania Liga I,FCSB vs Rapid Bucureşti,18:00,BTTS,PASS,32,26,8205652,2-1,W
+2025-12-21,Portugal Liga NOS,CD Tondela vs Casa Pia,18:00,O2.5,PASS,23,45,8227280,1-2,W
+2025-12-21,Belgium Pro League,OH Leuven vs Cercle Brugge,18:15,BTTS,PASS,53,41,8210092,0-2,L
+2025-12-21,Greece Super League,AEK Athens vs OFI,19:00,O2.5,PASS,24,49,8280472,2-1,W
+2025-12-21,Italy Serie A,Genoa vs Atalanta,19:45,BTTS,PASS,55,47,8238448,0-1,L
+2025-12-21,Spain La Liga,Real Betis vs Getafe CF,20:00,O2.5,PASS,38,50,8200574,4-0,W
+2025-12-21,Spain Segunda División,Cádiz vs CD Castellón,20:00,BTTS,PASS,50,50,8235307,2-0,L
+2025-12-21,Portugal Liga NOS,Santa Clara vs FC Arouca,20:30,O2.5,MEDIUM,55,63,8227271,0-0,L
