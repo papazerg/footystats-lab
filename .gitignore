@@ -13,3 +13,7 @@ data/results/*
 # Editor
 .vscode/
 .env
+
+# Archives 
+scripts/_archive/
+
