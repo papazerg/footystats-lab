@@ -191,14 +191,4 @@ accuracy_by_confidence.rb
 ```
 
 ---
- 
-```
-
----
-
-If you want next:
-- a **super-short README** + separate `DETAILS.md`
-- or a **Makefile / shell wrapper** that enforces this flow
-
-Just say the word.
 ```
