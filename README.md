@@ -22,13 +22,13 @@ Follow these steps each matchday to keep the dataset current.
 Run once per matchday, before games start.
 
 ```bash
-ruby scripts/slate.rb --all --from YYYY-MM-DD
+slate.rb --all --from YYYY-MM-DD
 ````
 
 Optional (include recent form data):
 
 ```bash
-ruby scripts/slate.rb --all --from YYYY-MM-DD --form
+slate.rb --all --from YYYY-MM-DD --form
 ```
 
 This step:
@@ -44,7 +44,7 @@ This step:
 Run after the slate has been created.
 
 ```bash
-ruby scripts/recommendations.rb YYYY-MM-DD
+recommendations.rb YYYY-MM-DD
 ```
 
 This step:
@@ -61,7 +61,7 @@ This step:
 Run after matches finish (same day or next day).
 
 ```bash
-ruby scripts/update_results.rb YYYY-MM-DD
+update_results.rb YYYY-MM-DD
 ```
 
 This step:
@@ -77,7 +77,7 @@ This step:
 Run periodically (weekly or ad-hoc).
 
 ```bash
-ruby scripts/accuracy_by_confidence.rb
+accuracy_by_confidence.rb
 ```
 
 This step:
