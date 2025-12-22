@@ -6,7 +6,11 @@ FootyStats-Lab is a lightweight data pipeline for collecting match fixtures, gen
 This project focuses on **signal collection and validation**, not staking, bankroll management, or comparison with other models.
 
 ---
+##  Behavior  
 
+Recommendations are evaluated by recording the outcome of the specific market chosen (BTTS or O2.5). Overall accuracy tracks system-level performance, confidence accuracy validates whether STRONG, MEDIUM, and PASS labels are calibrated, and pattern analysis identifies repeatable conditions where the model performs best. Daily analysis is observational, while all-time analysis informs strategy adjustments. Together, these layers ensure results are correctly tracked, graded honestly, and evaluated without overfitting.
+
+---
 ## Daily Workflow
 
 Follow these steps each matchday to keep the dataset current.
