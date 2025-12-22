@@ -1,100 +1,120 @@
 #!/usr/bin/env ruby
+# scripts/update_results.rb
 # frozen_string_literal: true
 
-require "csv"
+ENV["TZ"] = "UTC"
+
 require "date"
-require "json"
-require "net/http"
-require "uri"
+require "csv"
+require "fileutils"
+require "dotenv/load"
 
-PICKS_CSV = "data/results/picks.csv"
+require_relative "../lib/footystats"
 
-API_KEY = ENV["FOOTYSTATS_API_KEY"]
-abort("FOOTYSTATS_API_KEY not set") unless API_KEY && !API_KEY.empty?
-
-TARGET_DATE =
-  if ARGV[0]
-    Date.parse(ARGV[0])
-  else
-    Date.today
-  end
-
-puts "API KEY PRESENT? YES"
-puts "Updating results for #{TARGET_DATE}"
-
-def fetch_match(match_id)
-  uri = URI("https://api.football-data-api.com/match?key=#{API_KEY}&match_id=#{match_id}")
-  res = Net::HTTP.get_response(uri)
-  raise "API error #{res.code}" unless res.is_a?(Net::HTTPSuccess)
-
-  body = JSON.parse(res.body)
-  body["data"]
+def usage!
+  puts "Usage: ruby scripts/update_results.rb YYYY-MM-DD [--force]"
+  exit 1
 end
 
-rows = CSV.table(PICKS_CSV)
+date_str = ARGV.find { |a| a.match?(/^\d{4}-\d{2}-\d{2}$/) }
+force = ARGV.include?("--force")
+usage! unless date_str
+
+target_date = Date.parse(date_str).to_s
+
+csv_path = File.expand_path("../data/results/picks.csv", __dir__)
+abort "CSV not found: #{csv_path}" unless File.exist?(csv_path)
+
+rows = CSV.table(csv_path)
+
+# Ensure result columns exist
+unless rows.headers.include?(:btts_result)
+  rows.each { |r| r[:btts_result] = nil }
+end
+
+unless rows.headers.include?(:o25_result)
+  rows.each { |r| r[:o25_result] = nil }
+end
 
 updated = 0
 skipped = 0
 
 rows.each do |row|
-  # Skip header corruption or malformed rows
-  next if row[:date].nil?
-  next if row[:date].to_s.strip.downcase == "date"
+  # Only process rows for the requested date
+  next unless row[:date] == target_date
 
-  row_date =
-    begin
-      Date.parse(row[:date].to_s.strip)
-    rescue
-      nil
+  market = row[:market].to_s.strip.upcase
+  next if market.empty?
+
+  # Skip rows that already have results unless forcing
+  unless force
+    if (market == "BTTS" && row[:btts_result]) ||
+       ((market == "O2.5" || market == "O25") && row[:o25_result])
+      skipped += 1
+      next
     end
+  end
 
-  next unless row_date == TARGET_DATE
-  next unless row[:result].to_s.strip.downcase == "pending"
+  home_goals = nil
+  away_goals = nil
 
-  match_id = row[:match_id].to_s.strip
-  next if match_id.empty?
-
-  begin
-    match = fetch_match(match_id)
-
-    # Only process completed matches
-    status = match["status"].to_s.downcase
-    unless status == "complete"
+  # Prefer final_score if present
+  if row[:final_score].to_s.include?("-")
+    home_goals, away_goals = row[:final_score].split("-").map(&:to_i)
+  else
+    match_id = row[:match_id]
+    unless match_id
       skipped += 1
       next
     end
 
-    home_goals = match["homeGoalCount"]
-    away_goals = match["awayGoalCount"]
-    next if home_goals.nil? || away_goals.nil?
+    begin
+      match = Footystats.match(match_id)
+    rescue StandardError
+      skipped += 1
+      next
+    end
 
-    final_score = "#{home_goals}-#{away_goals}"
+    hg = match["home_goals"]
+    ag = match["away_goals"]
 
-    market = row[:market].to_s.upcase
-    win =
-      case market
-      when "BTTS"
-        home_goals > 0 && away_goals > 0
-      when "O2.5"
-        (home_goals + away_goals) >= 3
-      else
-        false
-      end
+    unless hg && ag
+      skipped += 1
+      next
+    end
 
-    row[:final_score] = final_score
-    row[:result] = win ? "W" : "L"
-
-    updated += 1
-  rescue => e
-    puts "ERROR fetching match #{match_id}: #{e.class} – #{e.message}"
-    skipped += 1
+    home_goals = hg.to_i
+    away_goals = ag.to_i
+    row[:final_score] = "#{home_goals}-#{away_goals}"
   end
+
+  total_goals = home_goals + away_goals
+
+  case market
+  when "BTTS"
+    row[:btts_result] =
+      home_goals > 0 && away_goals > 0 ? "W" : "L"
+  when "O2.5", "O25"
+    row[:o25_result] =
+      total_goals >= 3 ? "W" : "L"
+  else
+    skipped += 1
+    next
+  end
+
+  updated += 1
 end
 
-CSV.open(PICKS_CSV, "w") do |csv|
+# Write back atomically
+tmp = csv_path + ".tmp"
+CSV.open(tmp, "w") do |csv|
   csv << rows.headers
   rows.each { |r| csv << r }
 end
+FileUtils.mv(tmp, csv_path)
 
 puts "Results updated: #{updated}"
-puts "Skipped (not finished / API issues): #{skipped}"
+puts "Skipped: #{skipped}"
+puts "Force mode: #{force}"
+puts "CSV: #{csv_path}"
+puts
